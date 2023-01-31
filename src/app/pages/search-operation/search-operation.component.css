@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-buttom {
+    padding: 10px;
+    margin-top: 0px !important;
+}
+.td-buttom {
+    display: flex;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.example-full-width {
+  width: 100%;
+}
+  
+td {
+    padding-right: 8px;
+}
+
+#criar-bt {
+  margin-top: 20px;
+  float: left;
+  }
+
+.custom-file {
+  width: 655px;
+}
+
+.mat-header-cell {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content:center;
+}

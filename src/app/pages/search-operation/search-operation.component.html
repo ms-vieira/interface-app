@@ -1,0 +1,42 @@
+<div class="container">
+    <form class="example-form">
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número do Documento</mat-label>
+            <input matInput [(ngModel)]="documentNumber" name="lastName">
+          </mat-form-field></td>
+          <td class="td-buttom"> <div class="div-buttom" id="criar-bt">
+            <button mat-raised-button (click)="findByOperation()">Buscar</button>
+          </div></td>
+        </tr></table>
+        </form>
+  </div> 
+
+  <div class="dados">
+  <table class="example-full-width" mat-table [dataSource] = "dataSource" class="mat-elevation-z8" *ngIf="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Ação </th>
+      <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="clientId">
+      <th mat-header-cell *matHeaderCellDef> Número de Documento </th>
+      <td mat-cell *matCellDef="let element"> {{element.clientId}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="datProcess">
+      <th mat-header-cell *matHeaderCellDef> Data da Operação </th>
+      <td mat-cell *matCellDef="let element"> {{element.datProcess}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

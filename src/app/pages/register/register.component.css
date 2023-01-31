@@ -1,0 +1,38 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .name-position {
+    width: 430px;
+  }
+
+  .obs-position {
+    width: 655px;
+  }
+
+#criar-bt {
+  margin-top: 20px;
+  float: left;
+  }
+
+.custom-file {
+  width: 655px;
+}

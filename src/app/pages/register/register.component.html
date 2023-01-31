@@ -1,0 +1,76 @@
+<div class="container">
+    <form class="example-form">
+    
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="name-position">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="request.name" name="firstName">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número do Documento</mat-label>
+            <input matInput [(ngModel)]="request.numberDocument" name="lastName">
+          </mat-form-field></td>
+        </tr></table>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Endereço</mat-label>
+            <input matInput [(ngModel)]="request.address.street" name="street" placeholder="">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número</mat-label>
+            <input matInput [(ngModel)]="request.address.number" name="number" placeholder="">
+          </mat-form-field></td>
+
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Bairro</mat-label>
+            <input matInput [(ngModel)]="request.address.district" name="number" placeholder="">
+          </mat-form-field></td>
+        </tr></table>
+      
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Cidade</mat-label>
+            <input matInput [(ngModel)]="request.address.city" name="city" placeholder="Ex. San Francisco">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Estado</mat-label>
+            <input matInput [(ngModel)]="request.address.state" name="state" placeholder="Ex. California">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>CEP</mat-label>
+            <input matInput [(ngModel)]="request.address.zipCode" name="zipCode"  placeholder="Ex. 94105" value="94043">
+          </mat-form-field></td>
+        </tr></table>
+        <p>
+            <mat-form-field class="obs-position">
+              <mat-label>Observação do Cliente</mat-label>
+              <textarea matInput [(ngModel)]="request.observationClient" name="observationClient" placeholder=""></textarea>
+            </mat-form-field>
+          </p>
+
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              id="customFile"
+              (change)="onChange($event)"
+              multiple
+            />
+            <mat-card>
+              <mat-card-content class="custom-file-label" for="customFile" id="customFileLabel">
+                Faça o upload do seu documento</mat-card-content>
+            </mat-card>
+          </div>
+          <!-- <div class="custom-file">
+            <mat-card>
+              <mat-card-content>Faça o upload do seu documento</mat-card-content>
+              <button mat-raised-button (click)="onUpload()">Anexar Documento</button>
+            </mat-card>
+          </div> -->
+          
+        <div id="criar-bt">
+          <button mat-raised-button (click)="onUpload()" color="primary">Criar Cliente</button>
+        </div>
+      </form>
+</div> 

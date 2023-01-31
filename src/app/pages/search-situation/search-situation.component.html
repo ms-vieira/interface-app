@@ -1,0 +1,25 @@
+<div class="container">
+  <form class="example-form">
+    
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Número do Documento</mat-label>
+        <input matInput [(ngModel)]="documentNumber" name="documentNumber">
+      </mat-form-field></td>
+      <td class="td-buttom"> <div class="div-buttom" id="criar-bt">
+        <button mat-raised-button (click)="findBySituation()">Buscar</button>
+      </div></td>
+    </tr></table>
+    </form>
+
+    <div class="container" *ngIf="statusResponse">
+      <form class="example-form">
+
+    <mat-card>
+        <mat-card-content [(ngModel)]="statusResponse" name="statusResponse">
+          <input matInput [(ngModel)]="statusResponse" name="statusResponse">  
+        </mat-card-content>
+      </mat-card>
+    </form>
+
+</div> 

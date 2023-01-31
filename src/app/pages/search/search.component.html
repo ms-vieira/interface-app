@@ -1,0 +1,79 @@
+<div class="container">
+    <form class="example-form">
+    
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número do Documento</mat-label>
+            <input matInput [(ngModel)]="documentNumber" name="lastName">
+          </mat-form-field></td>
+          <td class="td-buttom"> <div class="div-buttom" id="criar-bt">
+            <button mat-raised-button (click)="findById()">Buscar</button>
+          </div></td>
+        </tr></table>
+        </form>
+  </div> 
+
+
+  <div class="container" *ngIf="response.numberDocument">
+    <form class="example-form">
+    
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="name-position">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="response.name" name="firstName">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número do Documento</mat-label>
+            <input matInput [(ngModel)]="response.numberDocument" name="documentNumber">
+          </mat-form-field></td>
+        </tr></table>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Endereço</mat-label>
+            <input matInput [(ngModel)]="response.address.street" name="street" placeholder="">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Número</mat-label>
+            <input matInput [(ngModel)]="response.address.number" name="number" placeholder="">
+          </mat-form-field></td>
+
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Bairro</mat-label>
+            <input matInput [(ngModel)]="response.address.district" name="district" placeholder="">
+          </mat-form-field></td>
+        </tr></table>
+      
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Cidade</mat-label>
+            <input matInput [(ngModel)]="response.address.city" name="city" placeholder="Ex. San Francisco">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Estado</mat-label>
+            <input matInput [(ngModel)]="response.address.state" name="state" placeholder="Ex. California">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>CEP</mat-label>
+            <input matInput [(ngModel)]="response.address.zipCode" name="zipCode"  placeholder="Ex. 94105" value="94043">
+          </mat-form-field></td>
+        </tr></table>
+        <p>
+            <mat-form-field class="obs-position">
+              <mat-label>Observação do Cliente</mat-label>
+              <textarea matInput [(ngModel)]="response.observationClient" name="observationClient" placeholder=""></textarea>
+            </mat-form-field>
+          </p>
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="attachDocument-position">
+              <mat-label>Endereço Do Documento</mat-label>
+              <input matInput [(ngModel)]="response.attachDocument" name="attachDocument">
+            </mat-form-field></td>
+          </tr></table>
+          <div id="update-bt">
+            <button mat-raised-button (click)="onUpdate()" color="accent">Atualizar Cliente</button>
+          </div>  
+      </form>
+</div> 
+
+  
